@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Biblioteca.css">
+    <title>Biblioteca.com.br</title>
+</head>
+<body>
+
+    <header>
+        <div class="container-grid conteudo-header">
+            <img class="logo"  src="Mundo literario.png" alt="Logo Biblioteca">
+            <nav id="menu-header" class="menu-header">
+                <a href="#" title="Inicio da página">Inicio</a>
+                <a href="#sub-sobre">Sobre</a>
+                <a href="https://www.google.com.br/maps/preview">Endereço</a>
+                <a class="botao" href="mailto:Mundo.literario.sp@gmail.com">Contate-nos</a>
+            </nav>
+            
+        </div>
+    </header>
+
+    <div class="banner">
+        <img class="fundo" src="biblioteca-universitaria.jpg" alt="">
+        <div class="container-grid conteudo-banner">
+            
+        </div>
+    </div>
+
+ <div id="carrosel"></div>
+        <img id="carroselImagem" src="" alt="passagem-de-imagem">
+
+     <div class="botoes"> 
+        <button id="anterior"> <span>ANTERIOR</span></button>
+        <button id="proximo"> <span>PRÓXIMO</span></button>
+        <button id="adicionar" onclick="adicionar()"> <span>ADICIONAR</span></button>
+        <button id="mostrar" onclick="mostrarLivros()"><span>MOSTRAR LIVRO</span></button>
+    </div>
+
+    <h2 id="sub-sobre">Sobre o mundo Literario</h2>
+
+    <div id="texto"><p class="texto-literario">Lorem ipsum dolor sit amet consectetur. Eu ut tortor id ullamcorper ut facilisis scelerisque. Facilisi dictum turpis sit sit pulvinar convallis elit sapien. Nulla venenatis elit imperdiet ut. Volutpat fermentum cras laoreet etiam eu molestie risus. Nibh vitae nibh morbi elit risus in vulputate gravida nisi. Neque sed diam lectus mi gravida vel neque commodo pretium. Sed sit ut dolor neque facilisi ornare scelerisque malesuada. Facilisis dolor mi porttitor et urna senectus vulputate nec. Viverra nec convallis viverra massa consequat sagittis enim scelerisqueLorem ipsum dolor sit amet consectetur. Eu ut tortor id ullamcorper ut facilisis scelerisque. Facilisi dictum turpis sit sit pulvinar convallis elit sapien. Nulla venenatis elit imperdiet ut. Volutpat fermentum cras laoreet etiam eu molestie risus. Nibh vitae nibh morbi elit risus in vulputate gravida nisi. Neque sed diam lectus mi gravida vel neque commodo pretium. Sed sit ut dolor neque facilisi ornare scelerisque malesuada. Facilisis dolor mi porttitor et urna senectus vulputate nec. Viverra nec convallis viverra massa consequat sagittis enim scelerisque.</p></div>
+
+<div class="imagem"><img src="mundo literario.jpg" alt="Pessoas tomando café e conversando." class="imgum"></div>
+
+    <div id="cadastrolivro">
+        <h1>Cadastro de livros</h1>
+        <input id="nomelivro" placeholder="Nome" type="text">
+        <input id="autorLivro" placeholder="Autor" type="text">
+        <input id="anoLivro" placeholder="Ano" type="date">
+
+    <script>
+
+let imgIndice = 0;
+const IMAGENS = ['assim que acaba.jpg', 'princesa de cinzas.jpg', 'sangue e cinzas.jpg', 'garota do lago.jpg', 'harry potterjpg.jpg', "o lado feio do amor.jpg", 'psicologia.jpg', 'arte do fodase.jpg','cafe com deus.jpg'];
+const prevButton = document.getElementById('anterior');
+const nextButton = document.getElementById('proximo');
+
+var IMG = document.getElementById('carroselImagem');
+
+function carregar() {
+    IMG.src = IMAGENS[imgIndice];
+};
+
+prevButton.addEventListener('click', () => {
+    if(imgIndice > 0) {
+    --imgIndice
+    //imgindice = imgindice - 1;
+    carregar();}
+});
+
+nextButton.addEventListener('click',() => {
+    var limite=(IMAGENS.length) -1 
+    if (imgIndice < limite) {
+    ++imgIndice
+    //imgindice = imgindice + 1;
+    carregar();}
+});
+carregar();
+
+let biblioteca = [];
+
+function cadastro(nome, autor, ano){
+    var livro = {
+        titulo: nome,
+        autor: autor,
+        ano: ano
+    };
+    biblioteca.push(livro)
+}
+
+function adicionar (){
+    let nome = document.getElementById('nomeLivro').value;
+    let autor = document.getElementById('autorLivro').value;
+    let ano = document.getElementById('anoLivro').value;
+    cadastro(nome, autor, ano); 
+}
+function mostrarLivros (){
+    console.log(`resultado:${biblioteca[0].titulo}`);
+};
+
+
+    </script>
+</body>
+</html>

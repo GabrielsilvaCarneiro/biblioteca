@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue'; background-color: #311803;
+}
+
+.banner {
+    height: 768px; width: 75rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    background-color: #512705;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.container-grid {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#carrosel{
+    display: flex;
+}
+
+.botoes{display: flex; gap:10px;}
+
+#anterior, #proximo, #adicionar, #mostrar{
+    margin: 10px;
+    padding: 1px 1px;
+    font-size: 10px; 
+    cursor: pointer; position: absolute; margin-left:825px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background: #000000;
+        font-family: "Montserrat", sans-serif;
+        box-shadow: 0px 6px 24px 0px rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+        border: none;
+       }
+
+
+       button:after {
+        content: " ";
+        width: 0%;
+        height: 100%;
+        background: #ffd500;
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        right: 0;
+       }
+       
+       button:hover::after {
+        right: auto;
+        left: 0;
+        width: 100%;
+       }
+       
+       button span {
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        padding: 18px 25px;
+        color: #ffffff;
+        font-size: 1.125em;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        z-index: 20;
+        transition: all 0.3s ease-in-out;
+       }
+       
+       button:hover span {
+        color: #000000;
+        animation: scaleUp 0.3s ease-in-out;
+       }
+       
+       @keyframes scaleUp {
+        0% {
+         transform: scale(1);
+        }
+       
+        50% {
+         transform: scale(0.95);
+        }
+       
+        100% {
+         transform: scale(1);
+        }
+       }
+       
+
+
+.conteudo-header {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.logo{
+    height: 80px;
+}
+
+.menu-header {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    transition: 0.5s;
+}
+
+.menu-header a:hover:not(.botao) {
+    font-size: 1.6em;
+    transition: 0.5s;
+    text-shadow: 4px 4px 6px #0000007a;
+}
+
+.botao{
+    background-color: #000000;
+    height: 45px;
+    width: 150px;
+    text-align: center;
+    line-height: 47px;
+    font-size: 1.5em !important;
+    border: solid 1px #080324;
+}
+
+.botao:hover{
+    font-size: 1.6em !important;
+    height: 50px;
+    line-height: 53px;
+    width: 160px;
+    transition: 0.5s;
+    box-shadow: 4px 4px 6px #0000007a;
+}
+
+.menu-barras{
+    display: none;
+}
+
+#carroselImagem{
+display: flex; margin-top: -600px; margin-left: 870px; width: 225px; height: 325px;
+}
+.fundo{
+    width: 123.4%; height: 600px;
+}
+
+.texto-literario{
+    text-align: justify; font:'sans', sans-serif;padding-left: 11.25rem; margin-top: 6.25rem; margin-right: 49.375rem; font-size: 1.125rem; color: white;
+}
+#sub-sobre{
+    margin-left: 10rem; font-size: 2.625rem; font: "Roboto"; margin-top: 200px; color: white;
+}
+
+.textosub{
+    color: white;
+}
+
+#cadastrolivro{
+    margin-top: 150px; margin-left: 200px; font-size: 22px;
+}
+
+       #proximo{
+        margin-left: 1000px;
+       }
+
+       #adicionar, #mostrar{
+        margin-top: 980px;
+       }
+
+       #mostrar{
+        margin-left: 1070px;
+       }
+
+#adicionar{
+    margin-left: 900px;
+}
+
+       h1{
+        color: white;
+       }
+
+       .imgum{ width:36.25rem; height: 31.25rem;
+        border-radius: .625rem; margin-left: 50rem; margin-top: -25rem;
+    }
